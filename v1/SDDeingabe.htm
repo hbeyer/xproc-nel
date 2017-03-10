@@ -1,0 +1,23 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>search-barock</title>
+</head>
+<body link="#CC3300" vlink="#CC3333">
+<font face="Verdana,Helvetia,Arial">
+<h4>Dateneingabe SDD - Neuerwerbungsliste</h4>
+<form action="/cgi-bin/sdd/sddconvert.pl" method='POST' enctype="multipart/form-data">
+  <p>
+  W&auml;hlen Sie die Textdatei mit den PICA-Downloaddaten von Ihrem Rechner aus. 
+  Daten m&uuml;ssen im PICA-Kategorienformat vorliegen. Achten Sie auf die richtige 
+  Zeichenkodierung. Achtung, vorhandene Listen werden überschrieben!
+  <p>
+  Downloadfile <br><input name="downloadfile" type="file" size="50" maxlength="200000" accept="text/*"><p>
+  Aktueller Stand <br> 
+  <input name="stand" type="text"> <p>
+  Password<br><input name="passwd" type="password"><p>
+  <input type="submit"><input type="reset">
+  </p>
+  </form>
+</body>
+</html>
