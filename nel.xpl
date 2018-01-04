@@ -13,7 +13,7 @@
 
   <p:variable name="sruUri" select="'http://sru.gbv.de/opac-de-23'"/>
   <p:variable name="sruParams" select="'operation=searchRetrieve&amp;maximumRecords=1000&amp;recordSchema=picaxml'"/>
-  <p:variable name="sruQuery" select="concat('pica.nea=', $nea, ' and pica.nel=', $nel)"/>
+  <p:variable name="sruQuery" select="concat('pica.nea=&quot;', $nea, '&quot; and pica.nel=&quot;', $nel, '&quot;')"/>
 
   <p:load>
     <p:with-option name="href" select="concat($sruUri, '?', $sruParams, '&amp;query=', encode-for-uri($sruQuery))"/>
