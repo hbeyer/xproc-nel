@@ -30,6 +30,7 @@
           #header { background-image: url('banner.jpg'); margin: 0; padding: 0; text-align: right; }
           #table-of-contents {  }
         </style>
+        <xsl:comment>Executed query: <xsl:value-of select="sru:searchRetrieveResponse/sru:echoedSearchRetrieveRequest/sru:query"/> </xsl:comment>
       </head>
       <body>
         <div id="header">
