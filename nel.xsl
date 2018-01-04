@@ -53,7 +53,7 @@
       <xsl:for-each-group select="sru:record/sru:recordData/mods:mods" group-by="mods:classification[@authorityURI = 'http://uri.hab.de/vocab/sdd-fachgruppen']">
         <xsl:sort select="mods:classification[@authorityURI = 'http://uri.hab.de/vocab/sdd-fachgruppen']/@valueURI"/>
         <li>
-          <a href="#fg{mods:classification[@authorityURI = 'http://uri.hab.de/vocab/sdd-fachgruppen']/@valueURI}">
+          <a href="#{generate-id()}">
             <xsl:value-of select="mods:classification[@authorityURI = 'http://uri.hab.de/vocab/sdd-fachgruppen']"/>
             <xsl:value-of select="concat(' (', count(current-group()), ')')"/>
           </a>
@@ -67,7 +67,7 @@
       <xsl:for-each-group select="sru:record/sru:recordData/mods:mods" group-by="mods:classification[@authorityURI = 'http://uri.hab.de/vocab/sdd-fachgruppen']">
         <xsl:sort select="mods:classification[@authorityURI = 'http://uri.hab.de/vocab/sdd-fachgruppen']/@valueURI"/>
         <li>
-          <h3 id="fg{mods:classification[@authorityURI = 'http://uri.hab.de/vocab/sdd-fachgruppen']/@valueURI}">
+          <h3 id="{generate-id()}">
             <xsl:value-of select="mods:classification[@authorityURI = 'http://uri.hab.de/vocab/sdd-fachgruppen']"/>
             <xsl:value-of select="concat(' (', count(current-group()), ')')"/>
           </h3>
