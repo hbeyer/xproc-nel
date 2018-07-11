@@ -32,6 +32,9 @@
 
   <p:xslt name="make-html">
     <p:with-param name="timespan" select="$timespan"/>
+    <p:input port="source">
+      <p:pipe step="make-mods" port="result"/>
+    </p:input>
     <p:input port="stylesheet">
       <p:document href="nel.xsl"/>
     </p:input>
