@@ -3,13 +3,9 @@
 		xmlns:c="http://www.w3.org/ns/xproc-step"
 		xmlns:p="http://www.w3.org/ns/xproc">
 
-  <p:serialization port="html" method="html" version="4.0"/>
-
   <p:option name="nea"      required="true"/>
   <p:option name="nel"      required="true"/>
   <p:option name="timespan" required="true"/>
-
-  <p:output port="html" primary="true" sequence="false"/>
 
   <p:variable name="sruUri" select="'http://sru.gbv.de/opac-de-23'"/>
   <p:variable name="sruParams" select="'operation=searchRetrieve&amp;maximumRecords=1000&amp;recordSchema=picaxml'"/>
@@ -40,15 +36,19 @@
     </p:input>
   </p:xslt>
 
+  <p:store href="public/sddlist.html" method="html" version="4.0">
+    <p:input port="source">
+      <p:pipe step="make-html" port="result"/>
+    </p:input>
+  </p:store>
+
   <p:xslt name="make-xsl">
+    <p:with-param name="timespan" select="$timespan"/>
     <p:input port="source">
       <p:pipe step="make-mods" port="result"/>
     </p:input>
     <p:input port="stylesheet">
       <p:document href="nelfo.xsl"/>
-    </p:input>
-    <p:input port="parameters">
-      <p:empty/>
     </p:input>
   </p:xslt>
 
