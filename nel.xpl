@@ -40,4 +40,25 @@
     </p:input>
   </p:xslt>
 
+  <p:xslt name="make-xsl">
+    <p:input port="source">
+      <p:pipe step="make-mods" port="result"/>
+    </p:input>
+    <p:input port="stylesheet">
+      <p:document href="nelfo.xsl"/>
+    </p:input>
+    <p:input port="parameters">
+      <p:empty/>
+    </p:input>
+  </p:xslt>
+
+  <p:xsl-formatter name="fo2pdf" href="public/sddlist.pdf" content-type="application/pdf">
+    <p:input port="source">
+      <p:pipe step="make-xsl" port="result"/>
+    </p:input>
+    <p:input port="parameters">
+      <p:empty/>
+    </p:input>
+  </p:xsl-formatter>
+
 </p:declare-step>
