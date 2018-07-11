@@ -1,7 +1,7 @@
 <p:declare-step version="1.0"
-                xmlns:pica="info:srw/schema/5/picaXML-v1.0"
-                xmlns:c="http://www.w3.org/ns/xproc-step"
-                xmlns:p="http://www.w3.org/ns/xproc">
+		xmlns:pica="info:srw/schema/5/picaXML-v1.0"
+		xmlns:c="http://www.w3.org/ns/xproc-step"
+		xmlns:p="http://www.w3.org/ns/xproc">
 
   <p:serialization port="html" method="html" version="4.0"/>
 
@@ -22,10 +22,10 @@
   <p:viewport name="make-mods" match="pica:record">
     <p:xslt>
       <p:input port="stylesheet">
-        <p:document href="pica2mods/src/xslt/pica2mods.xsl"/>
+	<p:document href="pica2mods/src/xslt/pica2mods.xsl"/>
       </p:input>
       <p:input port="parameters">
-        <p:empty/>
+	<p:empty/>
       </p:input>
     </p:xslt>
   </p:viewport>
