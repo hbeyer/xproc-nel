@@ -36,7 +36,7 @@
     </p:input>
   </p:xslt>
 
-  <p:store href="public/sddlist.html" method="html" version="4.0">
+  <p:store href="public/sddlist.htm" method="html" version="4.0">
     <p:input port="source">
       <p:pipe step="make-html" port="result"/>
     </p:input>
