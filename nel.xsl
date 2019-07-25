@@ -32,7 +32,7 @@
         </style>
         <xsl:comment>Executed query: <xsl:value-of select="sru:searchRetrieveResponse/sru:echoedSearchRetrieveRequest/sru:query"/> </xsl:comment>
       </head>
-      <body>
+      <body vocab="http://schema.org/">
         <div id="header">
           <img src="logo.png"/>
         </div>
@@ -73,7 +73,7 @@
           </h3>
           <ul>
             <xsl:for-each select="current-group()">
-              <li typeof="BibliographicResource">
+              <li typeof="Book">
                 <xsl:if test="mods:name[mods:role/mods:roleTerm = 'aut']">
                   <xsl:for-each select="mods:name[mods:role/mods:roleTerm = 'aut']">
                     <xsl:if test="position() > 1"><xsl:text>; </xsl:text></xsl:if>
@@ -82,7 +82,7 @@
                   <xsl:text>: </xsl:text>
                   <br/>
                 </xsl:if>
-                <span property="title">
+                <span property="name">
                   <xsl:value-of select="(mods:titleInfo[1]/mods:title, mods:titleInfo[1]/mods:subTitle)" separator=" : "/>
                 </span>
                 <xsl:text> </xsl:text>
@@ -96,12 +96,12 @@
                 <xsl:if test="mods:originInfo[mods:dateIssued]/mods:place or mods:originInfo[mods:dateIssued]/mods:publisher">
                   <xsl:text>, </xsl:text>
                 </xsl:if>
-                <span property="date">
+                <span property="datePublished">
                   <xsl:value-of select="mods:originInfo/mods:dateIssued"/>
                 </span>
                 <xsl:if test="mods:location/mods:shelfLocator">
                   <xsl:text> </xsl:text>
-                  <a href="http://opac.lbs-braunschweig.gbv.de/DB=2/PPN?PPN={mods:recordInfo/mods:recordIdentifier}" target="_blank">
+                  <a property="offers" typeOf="Offer" href="http://opac.lbs-braunschweig.gbv.de/DB=2/PPN?PPN={mods:recordInfo/mods:recordIdentifier}" target="_blank">
                     <span>
                       <xsl:value-of select="mods:location/mods:shelfLocator"/>
                     </span>
