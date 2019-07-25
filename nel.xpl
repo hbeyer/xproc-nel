@@ -5,9 +5,9 @@
 
   <p:option name="nea"      required="true"/>
   <p:option name="nel"      required="true"/>
-  <p:option name="timespan" required="true"/>
+  <p:option name="label" required="true"/>
 
-  <p:variable name="sruUri" select="'http://sru.gbv.de/opac-de-23'"/>
+  <p:variable name="sruUri" select="'http://sru.k10plus.de/opac-de-23'"/>
   <p:variable name="sruParams" select="'operation=searchRetrieve&amp;maximumRecords=1000&amp;recordSchema=picaxml'"/>
   <p:variable name="sruQuery" select="concat('pica.nea=&quot;', $nea, '&quot; and pica.nel=&quot;', $nel, '&quot;')"/>
 
@@ -27,7 +27,7 @@
   </p:viewport>
 
   <p:xslt name="make-html">
-    <p:with-param name="timespan" select="$timespan"/>
+    <p:with-param name="label" select="$label"/>
     <p:input port="source">
       <p:pipe step="make-mods" port="result"/>
     </p:input>
@@ -43,7 +43,7 @@
   </p:store>
 
   <p:xslt name="make-xsl">
-    <p:with-param name="timespan" select="$timespan"/>
+    <p:with-param name="label" select="$label"/>
     <p:input port="source">
       <p:pipe step="make-mods" port="result"/>
     </p:input>

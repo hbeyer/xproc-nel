@@ -1,2 +1,2 @@
 sddlist:
-	calabash.cmd nel.xpl nea="${nea}" nel="${nel}" timespan="${timespan}"
+	calabash.cmd nel.xpl nea="${nea}" nel="${nel}" label="${label}"

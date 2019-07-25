@@ -5,7 +5,7 @@
                xmlns:xs="http://www.w3.org/2001/XMLSchema"
                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:param name="timespan" as="xs:string" required="yes"/>
+  <xsl:param name="label" as="xs:string" required="yes"/>
 
   <xsl:template match="/">
     <html>
@@ -38,7 +38,7 @@
         </div>
         <div id="page">
           <h1>Sammlung Deutscher Drucke 1601-1700</h1>
-          <h2>Neuerwerbungsliste <xsl:value-of select="$timespan"/></h2>
+          <h2>Neuerwerbungsliste <xsl:value-of select="$label"/></h2>
           <div id="table-of-contents">
             <xsl:apply-templates mode="table-of-contents"/>
           </div>

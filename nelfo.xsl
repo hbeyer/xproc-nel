@@ -6,7 +6,7 @@
 	       xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	       xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:param name="timespan" as="xs:string" required="yes"/>
+  <xsl:param name="label" as="xs:string" required="yes"/>
   <xsl:output indent="yes"/>
 
   <xsl:attribute-set name="heading">
@@ -71,7 +71,7 @@
 	      Sammlung Deutscher Drucke 1601-1700
 	    </fo:block>
 	    <fo:block>
-	      Neuererwerbungen <xsl:value-of select="$timespan"/>
+	      Neuererwerbungen <xsl:value-of select="$label"/>
 	    </fo:block>
 	  </fo:block>
 	  <xsl:apply-templates/>
