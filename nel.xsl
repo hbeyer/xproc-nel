@@ -39,6 +39,9 @@
         <div id="page">
           <h1>Sammlung Deutscher Drucke 1601-1700</h1>
           <h2>Neuerwerbungsliste <xsl:value-of select="$label"/></h2>
+          <p>
+            <a href="sddlist.pdf" target="_blank">Download als PDF</a>
+          </p>
           <div id="table-of-contents">
             <xsl:apply-templates mode="table-of-contents"/>
           </div>
