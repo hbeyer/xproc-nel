@@ -14,6 +14,7 @@ Systemvoraussetzungen
 --
 
 - XProc 1.0 Prozessor mit Apache FOP-Verbindung (getestet mit XML Calabash)
+Beide Programme sind in Oxygen (Version 20.1) enthalten. Vorgehen: Man kopiert dieses Repositorium in ein Verzeichnis (das eingebundene Repositorium fo2pdf muss ggf. gesondert heruntergeladen werden). Man ruft in Oxygen die Datei nel.xpl auf. Dann erzeugt man ein neues Transformationsszenario (Str + Umschalt + C, Schaltfläche "Neu") und wählt "XProc transformation". Im Reiter "Optionen" definiert man die Werte für nea nel und label wie unten beschrieben. Dann das Transformationsszenario speichern und ausführen.
 
 System der Neuerwerbungslisten
 --
