@@ -73,10 +73,12 @@ Verzeichnis ```public```.
 Diese Dateien können dann z.B. mittels ftp auf
 ```dbs.hab.de/sddlist``` kopiert werden.
 
-Vorgehen mit Oxygen: 
-Dieses Repositorium in ein Verzeichnis laden (das eingebundene Repositorium fo2pdf muss ggf. gesondert heruntergeladen werden).
-Die Datei nel.xpl mit Oxygen öffnen. 
-Ein neues Transformationsszenario anlegen mit Str + Umschalt + C, Schaltfläche "Neu" und Auswahl von"XProc transformation".
-Im Reiter "Optionen" die Werte für nea nel und label wie oben beschrieben festlegen.
-Das Transformationsszenario speichern und ausführen, das Ergebnis wird im Ordner public gespeichert.
+Vorgehen mit Oxygen
+---
+
+- Dieses Repositorium in ein Verzeichnis laden (das eingebundene Repositorium fo2pdf muss ggf. gesondert heruntergeladen werden).
+- Die Datei nel.xpl mit Oxygen öffnen. 
+- Ein neues Transformationsszenario anlegen mit Str + Umschalt + C, Schaltfläche "Neu" und Auswahl von"XProc transformation".
+- Im Reiter "Optionen" die Werte für nea nel und label wie oben beschrieben festlegen.
+- Das Transformationsszenario speichern und ausführen, das Ergebnis wird im Ordner public gespeichert.
 
