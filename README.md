@@ -76,7 +76,7 @@ Diese Dateien können dann z.B. mittels ftp auf
 Vorgehen mit Oxygen
 ---
 
-- Dieses Repositorium in ein Verzeichnis laden (das eingebundene Repositorium fo2pdf muss ggf. gesondert heruntergeladen werden).
+- Dieses Repositorium in ein Verzeichnis laden.
 - Die Datei nel.xpl mit Oxygen öffnen. 
 - Ein neues Transformationsszenario anlegen mit Str + Umschalt + C, Schaltfläche "Neu" und Auswahl von"XProc transformation".
 - Im Reiter "Optionen" die Werte für nea nel und label wie oben beschrieben festlegen.
