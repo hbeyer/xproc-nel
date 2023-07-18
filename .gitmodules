@@ -1,0 +1,3 @@
+[submodule "pica2mods"]
+	path = pica2mods
+	url = https://github.com/hbeyer/pica2mods
