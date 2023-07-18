@@ -112,7 +112,10 @@
             <xsl:value-of select="current-grouping-key()"/>
           </fo:block>
           <xsl:for-each select="current-group()">
-            <xsl:call-template name="bibrecord"/>
+            <!--<xsl:call-template name="bibrecord"/>-->
+            <xsl:call-template name="bibrecord">
+              <xsl:with-param name="skipCreator" select="true()" as="xs:boolean"/>
+            </xsl:call-template>            
           </xsl:for-each>
         </fo:block>
       </xsl:for-each-group>
